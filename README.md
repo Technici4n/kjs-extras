@@ -25,3 +25,13 @@ events.listen("recipes", event => {
     event.recipes.minecraft.crafting_shapeless("diamond", "diamond_ore").id("kjsextras_output_hidden:ore_to_diamond");
 });
 ```
+
+### KubeJS Tag event: list all ids
+Use `kjsextras_getAllIds()` on a tag wrapper to retrieve all the current ids inside the tag.
+For example, to print the list of flowers:
+```js
+onEvent('items.tags', event => {
+    const allFlowers = event.get("minecraft:flowers").kjsextras_getAllIds();
+    console.log(`All flowers: ${allFlowers}`);
+})
+```
