@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "kjsextras",
+  "version": "${version}",
+  "name": "KubeJS Extras",
+  "description": "Extra features for use in KubeJS scripts. Made for the AOF4 pack, feel free to use for other packs!",
+  "authors": [
+    "Technici4n"
+  ],
+  "license": "MIT",
+  "icon": "assets/modid/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "rei_plugins":[
+      "dev.technici4n.kjsextras.ReiPlugin"
+    ]
+  },
+  "mixins": [
+    "kjsextras.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16",
+    "roughlyenoughitems": "*",
+    "kubejs": "*"
+  }
+}
