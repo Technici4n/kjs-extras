@@ -6,7 +6,8 @@
   "mixins": [
     "ObjectEntryAccessor",
     "TagEntryAccessor",
-    "TagWrapperMixin"
+    "TagWrapperMixin",
+    "WorldgenRemoveEventJSFabricMixin"
   ],
   "client": [
     "client/BasicDisplayMixin",

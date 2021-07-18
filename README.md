@@ -35,3 +35,16 @@ onEvent('items.tags', event => {
     console.log(`All flowers: ${allFlowers}`);
 })
 ```
+
+### KubeJS remove ores
+KJS Extras patches this event so it works in 1.17:
+```js
+// Example that removes some Tech Reborn ores.
+const ORES_TO_REMOVE = [ 'techreborn:lead_ore', 'techreborn:tin_ore', 'techreborn:silver_ore','techreborn:bauxite_ore', 'techreborn:iridium_ore' ];
+
+onEvent('worldgen.remove', event => {
+    event.removeOres(ores => {
+        ores.blocks = ORES_TO_REMOVE;
+    })
+});
+```
