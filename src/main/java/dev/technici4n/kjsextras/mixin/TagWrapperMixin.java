@@ -32,8 +32,16 @@ public class TagWrapperMixin {
 			Tag.Entry entry = trackedEntry.getEntry();
 			if (entry instanceof ObjectEntryAccessor acc) {
 				set.add(acc.kjsextras_getId().toString());
+			} else if (entry instanceof OptionalObjectEntryAccessor acc) {
+				if (((TagEventJSAccessor) event).kjsextras_getRegistry().apply(acc.kjsextras_getId()).isPresent()) {
+					set.add(acc.kjsextras_getId().toString());
+				}
 			} else if (entry instanceof TagEntryAccessor acc) {
 				((TagWrapperMixin) (Object) event.get(acc.kjsextras_getTagId())).addAllIds(set);
+			} else if (entry instanceof OptionalTagEntryAccessor acc) {
+				if (((TagEventJSAccessor) event).kjsextras_getTags().containsKey(acc.kjsextras_getTagId())) {
+					((TagWrapperMixin) (Object) event.get(acc.kjsextras_getTagId())).addAllIds(set);
+				}
 			} else {
 				throw new UnsupportedOperationException("Unsupported tag entry class: " + entry.getClass().getCanonicalName());
 			}

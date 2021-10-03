@@ -5,7 +5,10 @@
   "compatibilityLevel": "JAVA_16",
   "mixins": [
     "ObjectEntryAccessor",
+    "OptionalObjectEntryAccessor",
+    "OptionalTagEntryAccessor",
     "TagEntryAccessor",
+    "TagEventJSAccessor",
     "TagWrapperMixin",
     "WorldgenRemoveEventJSFabricMixin"
   ],

@@ -8,7 +8,7 @@
     "Technici4n"
   ],
   "license": "MIT",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/kjsextras/icon.png",
   "environment": "*",
   "entrypoints": {
     "rei_plugins":[
