@@ -9,8 +9,7 @@
     "OptionalTagEntryAccessor",
     "TagEntryAccessor",
     "TagEventJSAccessor",
-    "TagWrapperMixin",
-    "WorldgenRemoveEventJSFabricMixin"
+    "TagWrapperMixin"
   ],
   "client": [
     "client/BasicDisplayMixin",

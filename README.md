@@ -36,7 +36,7 @@ onEvent('items.tags', event => {
 })
 ```
 
-### KubeJS remove ores
+### ~~KubeJS remove ores~~ (NOT IMPLEMENTED IN 1.18)
 KJS Extras patches this event so it works in 1.17:
 ```js
 // Example that removes some Tech Reborn ores.

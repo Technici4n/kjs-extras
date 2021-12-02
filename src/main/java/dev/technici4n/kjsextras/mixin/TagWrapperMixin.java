@@ -1,6 +1,6 @@
 package dev.technici4n.kjsextras.mixin;
 
-import dev.latvian.kubejs.server.TagEventJS;
+import dev.latvian.mods.kubejs.server.TagEventJS;
 import net.minecraft.tag.Tag;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;

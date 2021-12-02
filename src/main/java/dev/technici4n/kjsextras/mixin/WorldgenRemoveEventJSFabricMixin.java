@@ -1,7 +1,7 @@
 package dev.technici4n.kjsextras.mixin;
 
 import com.google.common.collect.Iterators;
-import dev.latvian.kubejs.world.gen.fabric.WorldgenRemoveEventJSFabric;
+import dev.latvian.mods.kubejs.world.gen.fabric.WorldgenRemoveEventJSFabric;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import org.spongepowered.asm.mixin.Mixin;
@@ -11,6 +11,7 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 import java.util.Iterator;
 
+// TODO: disabled until it works again, if it's still needed
 @Mixin(value = WorldgenRemoveEventJSFabric.class, remap = false)
 public class WorldgenRemoveEventJSFabricMixin {
 	@Shadow
