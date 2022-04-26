@@ -10,20 +10,16 @@
   "license": "MIT",
   "icon": "assets/kjsextras/icon.png",
   "environment": "*",
-  "entrypoints": {
-    "rei_plugins":[
-      "dev.technici4n.kjsextras.ReiPlugin"
-    ]
-  },
   "mixins": [
     "kjsextras.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.11.3",
     "fabric": "*",
-    "minecraft": "1.18.x",
+    "minecraft": ">=1.18.2",
     "java": ">=17",
     "roughlyenoughitems": "*",
     "kubejs": "*"
-  }
+  },
+  "accessWidener": "kjsextras.accesswidener"
 }

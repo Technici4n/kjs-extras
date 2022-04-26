@@ -4,10 +4,6 @@
   "package": "dev.technici4n.kjsextras.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "ObjectEntryAccessor",
-    "OptionalObjectEntryAccessor",
-    "OptionalTagEntryAccessor",
-    "TagEntryAccessor",
     "TagEventJSAccessor",
     "TagWrapperMixin"
   ],

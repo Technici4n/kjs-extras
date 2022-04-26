@@ -1,0 +1,11 @@
+accessWidener v2 named
+
+accessible class net/minecraft/tags/Tag$OptionalElementEntry
+accessible class net/minecraft/tags/Tag$ElementEntry
+accessible class net/minecraft/tags/Tag$OptionalTagEntry
+accessible class net/minecraft/tags/Tag$TagEntry
+
+accessible field net/minecraft/tags/Tag$OptionalElementEntry id Lnet/minecraft/resources/ResourceLocation;
+accessible field net/minecraft/tags/Tag$ElementEntry id Lnet/minecraft/resources/ResourceLocation;
+accessible field net/minecraft/tags/Tag$OptionalTagEntry id Lnet/minecraft/resources/ResourceLocation;
+accessible field net/minecraft/tags/Tag$TagEntry id Lnet/minecraft/resources/ResourceLocation;

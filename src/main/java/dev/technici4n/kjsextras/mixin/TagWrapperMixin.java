@@ -1,7 +1,7 @@
 package dev.technici4n.kjsextras.mixin;
 
 import dev.latvian.mods.kubejs.server.TagEventJS;
-import net.minecraft.tag.Tag;
+import net.minecraft.tags.Tag;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -18,7 +18,7 @@ public class TagWrapperMixin {
 	private TagEventJS event;
 	@Final
 	@Shadow
-	private List<Tag.TrackedEntry> proxyList;
+	private List<Tag.BuilderEntry> proxyList;
 
 	public Set<String> kjsextras_getAllIds() {
 		Set<String> set = new HashSet<>();
@@ -28,19 +28,19 @@ public class TagWrapperMixin {
 
 	@Unique
 	private void addAllIds(Set<String> set) {
-		for (Tag.TrackedEntry trackedEntry : proxyList) {
-			Tag.Entry entry = trackedEntry.getEntry();
-			if (entry instanceof ObjectEntryAccessor acc) {
-				set.add(acc.kjsextras_getId().toString());
-			} else if (entry instanceof OptionalObjectEntryAccessor acc) {
-				if (((TagEventJSAccessor) event).kjsextras_getRegistry().apply(acc.kjsextras_getId()).isPresent()) {
-					set.add(acc.kjsextras_getId().toString());
+		for (var builderEntry : proxyList) {
+			Tag.Entry entry = builderEntry.entry();
+			if (entry instanceof Tag.ElementEntry el) {
+				set.add(el.id.toString());
+			} else if (entry instanceof Tag.OptionalElementEntry el) {
+				if (((TagEventJSAccessor) event).kjsextras_getRegistry().containsKey(el.id)) {
+					set.add(el.id.toString());
 				}
-			} else if (entry instanceof TagEntryAccessor acc) {
-				((TagWrapperMixin) (Object) event.get(acc.kjsextras_getTagId())).addAllIds(set);
-			} else if (entry instanceof OptionalTagEntryAccessor acc) {
-				if (((TagEventJSAccessor) event).kjsextras_getTags().containsKey(acc.kjsextras_getTagId())) {
-					((TagWrapperMixin) (Object) event.get(acc.kjsextras_getTagId())).addAllIds(set);
+			} else if (entry instanceof Tag.TagEntry acc) {
+				((TagWrapperMixin) (Object) event.get(acc.id)).addAllIds(set);
+			} else if (entry instanceof Tag.OptionalTagEntry acc) {
+				if (((TagEventJSAccessor) event).kjsextras_getTags().containsKey(acc.id)) {
+					((TagWrapperMixin) (Object) event.get(acc.id)).addAllIds(set);
 				}
 			} else {
 				throw new UnsupportedOperationException("Unsupported tag entry class: " + entry.getClass().getCanonicalName());

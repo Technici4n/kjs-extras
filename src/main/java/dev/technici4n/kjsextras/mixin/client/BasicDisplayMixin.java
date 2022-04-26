@@ -3,7 +3,7 @@ package dev.technici4n.kjsextras.mixin.client;
 import dev.technici4n.kjsextras.mixinimpl.BasicDisplayExtensions;
 import me.shedaniel.rei.api.common.display.basic.BasicDisplay;
 import me.shedaniel.rei.api.common.entry.EntryIngredient;
-import net.minecraft.util.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
@@ -18,7 +18,7 @@ public abstract class BasicDisplayMixin implements BasicDisplayExtensions {
 	protected List<EntryIngredient> outputs;
 
 	@Shadow
-	public abstract Optional<Identifier> getDisplayLocation();
+	public abstract Optional<ResourceLocation> getDisplayLocation();
 
 	/**
 	 * @author Technici4n
