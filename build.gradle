@@ -34,6 +34,12 @@ repositories {
 			includeGroup "dev.architectury"
 		}
 	}
+	maven {
+		url "https://maven.parchmentmc.net/"
+		content {
+			includeGroup "org.parchmentmc.data"
+		}
+	}
 }
 
 dependencies {
