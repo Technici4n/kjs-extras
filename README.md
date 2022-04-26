@@ -2,16 +2,6 @@
 Extra features for use in KubeJS scripts. Made for the AOF4 pack, feel free to use for other packs!
 
 ## Features
-### REI entry hiding
-In a client script, use the `kjsextras_rei` event to remove some items from REI's entry list.
-```js
-// Example that removes diamond and diamond blocks.
-const DELETED_ITEMS = ["minecraft:diamond", "minecraft:diamond_block"];
-
-events.listen("kjsextras_rei", event => {
-    DELETED_ITEMS.forEach(id => event.remove(id));
-});
-```
 
 ### REI output hiding
 Crafting recipes with namespace `kjsextras_output_hidden` have their output "hidden" from REI.
@@ -34,6 +24,17 @@ onEvent('items.tags', event => {
     const allFlowers = event.get("minecraft:flowers").kjsextras_getAllIds();
     console.log(`All flowers: ${allFlowers}`);
 })
+```
+
+### ~~REI entry hiding~~ (REMOVED IN 1.18.2, USE THE `rei.hide.items` event from KubeJS)
+In a client script, use the `kjsextras_rei` event to remove some items from REI's entry list.
+```js
+// Example that removes diamond and diamond blocks.
+const DELETED_ITEMS = ["minecraft:diamond", "minecraft:diamond_block"];
+
+events.listen("kjsextras_rei", event => {
+    DELETED_ITEMS.forEach(id => event.remove(id));
+});
 ```
 
 ### ~~KubeJS remove ores~~ (NOT IMPLEMENTED IN 1.18)
