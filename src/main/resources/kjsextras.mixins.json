@@ -4,8 +4,6 @@
   "package": "dev.technici4n.kjsextras.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "TagEventJSAccessor",
-    "TagWrapperMixin"
   ],
   "client": [
     "client/BasicDisplayMixin",

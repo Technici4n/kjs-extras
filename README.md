@@ -16,7 +16,7 @@ events.listen("recipes", event => {
 });
 ```
 
-### KubeJS Tag event: list all ids
+### ~~KubeJS Tag event: list all ids~~ (REMOVED IN VERSION 3, latest KubeJS now supports `.getObjectIds()` instead)
 Use `kjsextras_getAllIds()` on a tag wrapper to retrieve all the current ids inside the tag.
 For example, to print the list of flowers:
 ```js

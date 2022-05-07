@@ -55,7 +55,7 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	modImplementation "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
-	modImplementation "dev.latvian.mods:kubejs-fabric:1802.5.1-build.360"
+	modImplementation "dev.latvian.mods:kubejs-fabric:1802.5.1-build.394"
 }
 
 loom {
